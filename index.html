@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Novo</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        body{
+            background-image: url(https://i.pinimg.com/originals/81/e2/55/81e255e0ceeca98084787662c4f7814c.gif);
+            background-size: 100% 100%;
+
+            height: 95vh;
+            padding: 10px;
+            font-family: "Nunito", sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        main {
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+            padding: 50px;
+            height: 400px;            
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.973);
+            border-radius: 20px;
+        }
+        img {
+            width: 200px;
+        }
+        h2 {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        button{
+            width: 100px;
+            height: 40px;
+            background-color: rgb(157, 172, 28);
+            color: white;
+            border: 2px solid white;
+            border-radius: 17px;
+            margin-left: -110px;
+        }
+
+        button:hover{
+            background-color: blue;
+            cursor: pointer;
+        }
+
+        #canoas{
+            position: absolute;
+            margin-left: 10px;
+        }
+
+        img{
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+    </style>
+</head>
+<body>
+   
+    <main>
+        <h1>ANO NOVO!</h1>
+        <h2>Vamos comemorar o Ano Novo de 2026 em?</h2>
+
+        <div><img src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/1f37e.gif" alt=""></div>
+       
+        <button type="button" id="tramanda">Tramandai</button>
+        <button onmouseover="fuja()" type="button" id="canoas">Canoas</button>
+    </main>
+
+    <script>
+        function fuja(){
+            var botcanoas = document.getElementById("canoas")
+            
+            var largurajanela = window.innerWidth;
+            var alturajanela = window.innerHeight;
+
+            var maxX = largurajanela - botcanoas.offsetWidth;
+            var maxY = alturajanela - botcanoas.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() *  maxX)
+            var aleatorioY = Math.floor(Math.random() * maxY)
+
+            botcanoas.style.left = aleatorioX + "px";
+            botcanoas.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
